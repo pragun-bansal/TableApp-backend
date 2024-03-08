@@ -79,13 +79,13 @@ const deleteEntry = async (req, res) => {
             TableModel.findByIdAndUpdate(tableId, { entries: newTasks }).then((data) => { // Replace newentries with newTasks
             console.log("Deleted Successfully....");
             console.log(data);
-            res.send(entry);
             });
         })
         .catch((err) => {
             console.log(err);
         });
     }
+    res.send("Deleted Successfully....");
   }
   catch(err){
       console.log(err)
