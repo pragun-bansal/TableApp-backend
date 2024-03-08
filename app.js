@@ -25,8 +25,8 @@ mongoose
 app.use("/api",routes);
 
 
-app.use(express.static(path.join(__dirname, '/build')));
-app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'build','index.html')));
+app.use(express.static(path.join(__dirname, 'views','build')));
+app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'views','build','index.html')));
 
 
 app.listen(PORT, () => {
